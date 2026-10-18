@@ -140,7 +140,7 @@ namespace EF_StoreProcedure.Controllers
 
             // Approach 1: Using ExecuteSqlRaw (Positional Parameters)
             // Suitable for static queries; parameters are safely passed to SQL.
-            int rowsAffected = await _context.Database.ExecuteSqlRawAsync("EXEC spUpdateStudent @p0, @p1, @p2, @p3, @p4, @p5, @p5, @p6", dto.StudentId, dto.FirstName, dto.LastName!, dto.Branch,
+            int rowsAffected = await _context.Database.ExecuteSqlRawAsync("EXEC spUpdateStudent @p0, @p1, @p2, @p3, @p4, @p5, @p6", dto.StudentId, dto.FirstName, dto.LastName!, dto.Branch,
                 dto.Gender, dto.Email, dto.Phone);
 
             // Approach 2: Using ExecuteSqlInterpolated (Cleaner Syntax)
