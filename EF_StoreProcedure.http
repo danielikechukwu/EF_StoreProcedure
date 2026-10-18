@@ -1,0 +1,6 @@
+@EF_StoreProcedure_HostAddress = http://localhost:5286
+
+GET {{EF_StoreProcedure_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
